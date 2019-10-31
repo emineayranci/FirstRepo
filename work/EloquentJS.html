@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maeyler.github.io/JS/sss/inspector.css" rel="stylesheet" media="all">
+    <link rel="icon" href="../images/icon192.png">
+    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+    <script src="c4_data.js"></script>
+    <script src="c6_object.js"></script>
+    <script src="../exam/Quiz.js"></script>
+    <script src="Async.js"></script>
+    <title>Eloquent JavaScript </title>
+
+</head>
+
+<body>
+    <p><b id=docName></b> &nbsp;
+        <a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+        <a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+    </p>
+    <div id=sss></div>
+    <pre id=disp1></pre>
+    <img id=disp2 /> <br>
+    WORKS <br>
+
+    <a href="https://emineayranci.github.io/FirstRepo/Pasta%20Grafik.png">CW1 - Pasta Grafik</a> <br>
+    <a href="https://emineayranci.github.io/FirstRepo/increasing">CW2 - Increasing</a> <br>
+    <a href="https://emineayranci.github.io/FirstRepo/CtoF">CW2 - Temparature</a> <br>
+    <a href="https://emineayranci.github.io/FirstRepo/CW3.png">CW3</a> <br>
+    <a href="https://emineayranci.github.io/FirstRepo/Courses.html">CW4 - Courses</a> <br>
+
+    <script>
+        "use strict";
+        class CW5 extends Menu {
+            constructor(course,student,point,point3D) {
+                super();
+                this.course=new Course("Computer","13.00","31/10/2019","B121")
+                this.student=new Student(1621221006,"Emine",4,"Computer")
+                this.point=new Point(1,2);
+                this.point3D=new Point3D(1,2,3);
+            }
+        }
+        class Course  {
+            constructor(name,time,date,...rooms) {
+                this.name=name;
+                this.time=time;
+                this.date=date;
+                this.rooms=rooms;
+            }
+            toString(){
+                return this.name;
+            }
+        }
+        class Student   {
+            constructor(id,name,gpa,courses) {
+                this.id=id;
+                this.name=name;
+                this.gpa=gpa;
+                this.courses=courses;
+            }
+            toString(){
+                return this.name;
+            }
+        }
+        class Point   {
+            constructor(x,y) {
+                this.x=x;
+                this.y=y;
+            }
+            toString(){
+                return this.x +", "+ this.y;
+            }
+        }
+        class Point3D extends Point {
+            constructor(x,y,z) {
+                super(x,y);
+                this.z=z;
+            }
+            toString(){
+                return this.x+", "+this.y+", "+this.z;
+            }
+        }
+    
+        var a, b, c, code;  //global variables
+        function init() {
+            let len = 123, name = "Circle", pi = Math.PI;
+            a = [0, 11, "22", "abc"];
+            c = { len, name, pi };
+            display(new Chap4());
+            display(new Chap6());
+            display(new Quiz());
+            display(new Async());
+            MENU = new CW5(); //global
+            display(MENU);
+        }
+        docName.innerText = "Inspector " + VERSION;
+        try {
+            inspect(sss, init); //makes the table
+            inp.value = "new Date()";
+        } catch (e) {
+            reportError(e);
+        }
+    </script>
+</body>
+
+</html>
