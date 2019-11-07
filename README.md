@@ -1,4 +1,6 @@
-# FirstRepo
+# JS CLASS
+
+Emine Samiyenur Ayrancı  1621221006
 
 [CW1](https://emineayranci.github.io/FirstRepo/Pasta%20Grafik.png) - Pasta Grafik
 
