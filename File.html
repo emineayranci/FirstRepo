@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>File Operations </title>
+</head>
+
+<body>
+    <p><b id=docName></b> &nbsp;
+
+
+    </p>
+    <div id=sss></div>
+    <p>
+        <input type=text id=url>
+        <input type=button value="Read Remote File" onClick="readRemote()">
+    </p>
+    <p>
+        <input type=file multiple onChange='fileSelect(this)' />
+    </p>
+    <p>
+        <input type=button value="Compare" onClick="compare()">
+    </p>
+
+    <pre id=disp1></pre>
+
+    <script>
+        "use strict";
+        let data = "";
+        let metin = "";
+        let selectedFiles = [];
+        let selectedFilesName = [];
+        function readRemote() {
+            fetch(url.value)
+                .then(r => r.text())
+                .then(r => kaydet(r));
+        }
+
+        function kaydet(d) {
+            data = d;
+        }
+
+        function fileSelect(t) {
+            metin = "";
+            if (t.files.length == 0) return;
+            for (let file of t.files) {
+                readText(file);
+                metin += file.name + " , ";
+            }
+        }
+
+        function readText(f) {
+            selectedFiles = [];
+            selectedFilesName = [];
+            var reader = new FileReader();
+            if (isTextFile(f)) {
+                disp1.innerText = ""
+                reader.onload = function (evt) {
+                    const a = evt.target.result;
+                    selectedFiles.push(a);
+                    selectedFilesName.push(f.name);
+                };
+                reader.readAsText(f);
+            } else {
+                disp1.innerText = "Text dosyası degil."
+            }
+        }
+
+        function isTextFile(f) {
+            console.assert(f instanceof File);
+            return f.type.startsWith("text") || f.name.endsWith(".md")
+                || f.name.endsWith(".js") || f.name.endsWith(".java");
+        }
+
+        function compare() {
+            let counter = 0;
+            let sameFiles = [];
+            for (let i = 0; i < selectedFiles.length; i++) {
+                if (selectedFiles[i] == data) {
+                    counter++;
+                    sameFiles.push(selectedFilesName[i]);
+                }
+            }
+            if (counter == 0) {
+                disp1.innerText = " ";
+                disp1.innerText = "Choose files : " + metin + " \n all files are different ";
+            }else{
+                for(let i=0; i<sameFiles.length; i++){
+                    disp1.innerText = " ";
+                    disp1.innerText = "Choose files : " + metin + " \n" + sameFiles[i] + " is the same " + url.value;
+
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
