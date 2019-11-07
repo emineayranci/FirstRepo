@@ -10,4 +10,6 @@
 
 [CW4](https://emineayranci.github.io/FirstRepo/Courses.html) - Courses
 
+[CW6](https://emineayranci.github.io/FirstRepo/File.html) - File Operations
+
 
