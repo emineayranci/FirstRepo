@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://maeyler.github.io/305/work/Timing -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://maeyler.github.io/305/images/icon192.png">
+    <script src="./Clock 13_15_files/Database.js"></script>
+    <title>Clock 13:15</title>
+
+    <style>
+        body {
+            max-width: 450px;
+        }
+
+        #clock {
+            font-size: 48px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Time Measurement</h2>
+
+    <button onclick="search()">Search</button>
+    <p id="out"></p>
+
+    <script>
+        "use strict";
+        const url = "https://maeyler.github.io/JS/data/"
+        const array = []
+        const map = new Map()
+        function readData(file) {
+            console.log("readData " + file)
+            fetch(url + file)
+                .then(r => r.text())
+                .then(addStudents)
+                .catch(console.error)
+        }
+        function parseStudent(line) {
+            let [id, name, gpa, ...L] = line.split('\t')
+            let std = new Student(id, name, gpa)
+            std.courses = L; return std
+        }
+        function addStudents(txt) {
+            let msg = "<br>Data contains "
+                + txt.length + " chars, "
+            let a = txt.split('\n')
+            msg += a.length + " lines <br>"
+            for (let s of a) {
+                let std = parseStudent(s)
+                array.push(std.id);
+                map.set(std.id, std)
+            }
+            msg += array.length + " students "
+            out.innerHTML += msg
+        }
+
+        function search() {
+            let counterArray = 0;
+            let counterMap = 0;
+            let r = 116700533;
+            
+            let temp = r;
+            let timingArray = performance.now()
+            for (let i = 0; i < 10000; i++) {
+                if (array.includes(temp + "")) {
+                    counterArray++;
+                }
+                temp++;
+            }
+            timingArray = performance.now() - timingArray;
+            temp = r;
+            let timingMap = performance.now()
+            for (let i = 0; i < 10000; i++) {
+
+                if (map.has(temp + "")) {
+                    counterMap++;
+                }
+                temp++;
+            }
+            timingMap = performance.now() - timingMap;
+
+            let a = "Counter Array : " + counterArray + " Counter Map : " + counterMap;
+            let s = "Timing Array : " + timingArray + " msec " + "<br>  Timing Map : " + timingMap + " msec ";
+            out.innerHTML += "<br>" + a + "<br>" + s; console.log(s)
+        }
+
+        //title.innerText = document.title;
+        readData("Students.txt")
+    </script>
+
+
+
+</body>
+
+</html>
