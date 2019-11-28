@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="index.js"></script>
+    <title>CW 7</title>
+</head>
+<style>
+    table {
+        width:400px;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+    }
+    table.t01 tbody tr th {
+        background-color: #d2d2d2;
+    }
+
+</style>
+<body>
+    <h2 id="title">Fill the Table</h2>
+    <p id="info"></p>
+    <hr />
+    <h5 id="subTitle"></h5>
+    <p>
+        <table id="datas" class="t01">
+        </table>
+    </p>
+    <hr />
+    <script>
+        var c = new ReadJSON('https://emineayranci.github.io/FirstRepo/index.json')
+        c.readData()
+    </script>
+</body>
+</html>
+
