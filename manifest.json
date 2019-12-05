@@ -1,0 +1,26 @@
+{
+    "name": "EMİNE SAMİYENUR AYRANCI",
+    "description": "Advanced Programming Classwork",
+    "short_name": "FirstRepo",
+    "start_url": "/FirstRepo/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "#457cdb",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
