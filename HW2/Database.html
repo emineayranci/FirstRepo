@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="Database.js"></script>
+    <title>Students and Courses Database </title>
+
+    <style>
+        .link {
+            color: blue;
+            cursor: pointer;
+            font-style: italic;
+        }
+
+        .course {
+            visibility: hidden;
+            font: 10px arial, sans-serif;
+            color: white;
+            background: blue;
+            cursor: text;
+            padding: 6px;
+            position: absolute;
+            height: 90px;
+            overflow-y: auto;
+        }
+
+        .link:hover .course {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id=title></h2>
+
+    <button onClick='database.randomStd()'>Random Student</button>
+    <button onClick='database.randomRoom();'>Random Room</button>
+
+    <button onClick='out.innerText=""'>Clear</button>
+
+    <button onClick='database.findBest()'>Find Best</button>
+    <p>Student id:
+        <input type=number id="std">
+        <button onClick='database.examSchedule(std.value)'> Exam schedule for student</button>
+        <button onClick='database.coursesByStudent(std.value)'> Courses taken by student</button>
+    </p>
+    <p>Course code:
+        <input type=text id="crs">
+        <button onClick='database.studentList(crs.value)'> Student list taking a given course </button>
+    </p>
+    <p>GPA:
+        <input type=number id="gpa"> 
+        <button onClick='database.aboveGpa(gpa.value)'>Number of students above a given GPA</button> 
+    </p>
+    <p>Room:
+        <input type=text id="room"> 
+        <button onClick='database.courseList(room.value)'>Course list for exam room</button> 
+        <button onClick='database.counterOfCourses(room.value)'>Total number of courses in a given room</button> 
+    </p>
+
+    <p id=out onClick='doClick(event)'></p>
+
+    <hr />
+
+    <script>
+        "use strict";
+        title.innerText = document.title;
+
+        
+    </script>
+
+</body>
+
+</html>
