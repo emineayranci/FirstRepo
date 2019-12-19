@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animations</title>
+</head>
+<style>
+    #screen{
+        text-align: center;
+    }
+    #car{
+        text-align: 200px;
+    }
+</style>
+<body>
+    <div id="screen">
+
+        <h1 id="h1">CSS Animations</h1>
+
+        <span>Fast <input type="range" min="100" max="500" onchange="console.log(this.value)"
+                oninput="startRacing(this.value)"> Slow</span>
+        <div id=car>
+            <div>
+                <img id="car1" src="img/car1.jpg" height="100">
+            </div>
+            <div>
+                <img id="car2" src="img/car2.png" height="50">
+            </div>
+            <br>
+            <div>
+                <img id="car3" src="img/car3.png" height="60px">
+            </div>
+        </div>
+        <br>
+        <button id="jump" onclick="jump()"><strong>Jump</strong></button>
+        <button id="rotate" onclick="rotate()"><strong>Rotate</strong></button>
+        <br><br>
+
+        <div> <strong>Click the ball</strong></div><br><br>
+        <div id="line">
+            <img id="ball" onclick="biggerBall()" src="img/ball.png" height="150">
+        </div>
+    </div>
+    <script>
+
+        const
+            r0 = "rotate(0)", x0 = "translateX(0)", y0 = "translateY(0)",
+            t1 = { transform: [x0, "translateX(400px)"] },
+            t2 = { transform: [y0, "translateY(100px)", y0,"translateY(100px)", y0,"translateY(100px)", y0] },
+            t3 = { transform: [r0, "rotate(180deg)"] },
+            t4 = { height: ["150px", "200px","150px"],   }
+
+        function startRacing(speed) {
+            car1.animate(t1, speed * 5);
+            car2.animate(t1, speed * 10);
+            car3.animate(t1, speed * 15);
+        }
+        function jump() {
+            ball.animate(t2, 1000);
+        }
+        function rotate() {
+            line.animate(t1, 2000);
+            ball.animate(t3, 2000);
+        }
+        function biggerBall(){
+            ball.animate(t4,3000);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
