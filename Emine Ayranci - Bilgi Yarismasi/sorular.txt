@@ -1,0 +1,3 @@
+En eski programlama dili hangisidir?	A)Fortran	B)C	C)Java	D)Python	A
+Linux işletim sisteminin kurucusu kimdir?	A)Steve Jobs	B)Ada Lovelace	C)Linus Torvalds	D)Tesla	C
+Bilgisayarda bilgiler geçici olarak hangi bellek üzerinde tutulur?	A)Memory Card	B)Hard Disc	C)ROM	D)RAM	D
