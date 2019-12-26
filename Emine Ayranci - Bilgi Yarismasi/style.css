@@ -6,22 +6,36 @@
     border: 5px solid rgb(0, 62, 121);
     background-color: rgb(57, 131, 201);
 }
-.soru{
+#soru{
     width: 300px;
     padding: 10px;
     font-size: 20px;
     border: 3px solid rgb(0, 62, 121);
     background-color: rgb(122, 182, 238);
+    border-radius: 10px;
 }
-.buton{
-    width: 150px;
-    padding: 10px;
-    font-size: 20px;
-    background-color:rgb(122, 182, 238);
-    color:black;
-    border: 2px solid black
+.option {
+    width: 250px;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px 0 10px 10px;
+    color: #000000;
+    border-radius: 10px;
 }
-.para{
+.next-btn {
+    border: none;
+    outline: none;
+    background: rgb(122, 182, 238);
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+}
+.money{
     width: 100px;
     height: 25px;
     background-color:rgb(0, 62, 121);;
