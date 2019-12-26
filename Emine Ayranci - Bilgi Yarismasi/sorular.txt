@@ -1,5 +1,5 @@
 En eski programlama dili hangisidir?	A)Fortran	B)C	C)Java	D)Python	A
 Linux işletim sisteminin kurucusu kimdir?	A)Steve Jobs	B)Ada Lovelace	C)Linus Torvalds	D)Tesla	C
 Bilgisayarda bilgiler geçici olarak hangi bellek üzerinde tutulur?	A)Memory Card	B)Hard Disc	C)ROM	D)RAM	D
-Aşağıdakilerden hangisinde bellek birimleri küçükten büyüğe doğru sıralanmıştır?  A) Byte- Kilobyte- Megabyte-Gigabyte  B) Byte- Kilobyte- Gigabyte- Megabyte C) Gigabyte- Kilobyte- Byte- Megabyte D) Megabyte- Kilobyte- Byte- Gigabyte A
+Aşağıdakilerden hangisinde bellek birimleri küçükten büyüğe doğru sıralanmıştır?  A)Byte- Kilobyte- Megabyte-Gigabyte B) Byte- Kilobyte-Gigabyte- Megabyte  C) Gigabyte-Kilobyte-Byte-Megabyte  D)Megabyte-Kilobyte-Byte-Gigabyte A
 Bilgisayar bellek birimlerinden 1 byte, kaç bit’ ten oluşur?  A) 3  B) 6  C) 8  D) 10 C
