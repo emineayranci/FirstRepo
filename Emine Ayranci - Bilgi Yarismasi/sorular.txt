@@ -1,4 +1,12 @@
 En eski programlama dili hangisidir?	A)Fortran	B)C	C)Java	D)Python	A
 Linux işletim sisteminin kurucusu kimdir?	A)Steve Jobs	B)Ada Lovelace	C)Linus Torvalds	D)Tesla	C
 Bilgisayarda bilgiler geçici olarak hangi bellek üzerinde tutulur?	A)Memory Card	B)Hard Disc	C)ROM	D)RAM	D
-
+Aşağıdakilerden hangisinde bellek birimleri küçükten büyüğe doğru sıralanmıştır?	A)Byte- Kilobyte- Megabyte-Gigabyte	B) Byte- Kilobyte-Gigabyte- Megabyte	C) Gigabyte-Kilobyte-Byte-Megabyte	D)Megabyte-Kilobyte-Byte-Gigabyte	A
+Bilgisayar bellek birimlerinden 1 byte, kaç bit’ten oluşur?	A)3	B)6	C)8	D)10	C
+Web sayfalarını şekillendirmek için hangi dil kullanılır?	A)CSS	B)Java	C)Python	D)C++	A
+Tübitak tarafından geliştirilen Türkiye’nin milli işletim sistemi aşağıdakilerden hangisidir?	A)Linux	B)Pardus	C)Windows	D)IOS	B
+Aşağıdaki kullanımlardan hangisi ile önce arttırma işlemi yapılıp daha sonra atama işlemi yapılır?	A)++x	B)x++	C)+x	D)x+	A
+Aşağıdaki erişim türlerinden hangisine her yerden ulaşmak mümkündür?	A) Private	B) Protected	C)Public	D)Internal	C
+Referans tipler nerede saklanır?	A)Diskette	B)Stack bölgesinde	C)Harddiskde	D)Heap bölgesinde	D
+Aşağıdakilerden hangisi Fatih Sultan Mehmet Vakıf Üniversitesi Bilgisayar Mühendisliği akademik kadrosunda yer almaz?	A)Mehmet Akif Eğler	B)Ali Nizam	C)Fethi Çallıalp	D)Muhammet Alkan	C
+Fatih Sultan Mehmet Vakıf Üniversitesi kaç yılında kurulmuştur?	A)2010	B)2009	C)2011	D)2012	A
