@@ -12,17 +12,21 @@
 
 <body>
 
-    <div style="position: fixed; left: 30%; width:40%;">
+    <div>
         <p><input type="text" class="sure" name="sure" value="30"> <br>
         </p>
 
         <div id="context">
 
             <p id="soru"></p> <br>
-            <label class='option'><input type='radio' name='option' id="op1" value='A' /> <span id='opt1'></span></label><br>
-            <label class='option'><input type='radio' name='option' id="op2" value='B' /> <span id='opt2'></span></label><br>
-            <label class='option'><input type='radio' name='option' id="op3" value='C' /> <span id='opt3'></span></label><br>
-            <label class='option'><input type='radio' name='option' id="op4" value='D' /> <span id='opt4'></span></label><br>
+            <label class='option'><input type='radio' name='option' id="op1" value='A' /> <span
+                    id='opt1'></span></label><br>
+            <label class='option'><input type='radio' name='option' id="op2" value='B' /> <span
+                    id='opt2'></span></label><br>
+            <label class='option'><input type='radio' name='option' id="op3" value='C' /> <span
+                    id='opt3'></span></label><br>
+            <label class='option'><input type='radio' name='option' id="op4" value='D' /> <span
+                    id='opt4'></span></label><br>
             <button id="nextButton" class="next-btn" onclick="checkAnswer()"> NEXT </button>
         </div> &nbsp;
         <input type="text" class="money" id="oniki" value="500 TL"> <br> &nbsp;
@@ -78,27 +82,26 @@
                     counter++;
                     yazdir(counter);
                 } else {
-                    gameOver();
-                    console.log("Game over");
+                    context.innerHTML = " OYUN BİTTİ "
                 }
             }
         }
     }
-    function gameOver() {
-        context.innerHTML = " OYUN BİTTİ "  
-    }
     function yazdir(numara) {
-        op1.checked=false;
-        op2.checked=false;
-        op3.checked=false;
-        op4.checked=false;
-     
-        soru.innerHTML = sorular[numara][0];
-        opt1.innerHTML = sorular[numara][1];
-        opt2.innerHTML = sorular[numara][2];
-        opt3.innerHTML = sorular[numara][3];
-        opt4.innerHTML = sorular[numara][4];
-  
+        if (counter == 12) {
+            context.innerHTML = " KAZANDINIZ "
+        } else {
+            op1.checked = false;
+            op2.checked = false;
+            op3.checked = false;
+            op4.checked = false;
+
+            soru.innerHTML = sorular[numara][0];
+            opt1.innerHTML = sorular[numara][1];
+            opt2.innerHTML = sorular[numara][2];
+            opt3.innerHTML = sorular[numara][3];
+            opt4.innerHTML = sorular[numara][4];
+        }
     }
     function restart() {
 
