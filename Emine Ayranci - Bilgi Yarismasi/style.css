@@ -1,14 +1,16 @@
 #context{
     float: left;
     width: 320px;
-    height: 400px;
-    padding: 30px;
-    border: 5px solid rgb(0, 62, 121);
+    height: 450px;
+    padding: 20px;
+    border: 4px solid rgb(0, 62, 121);
     background-color: rgb(57, 131, 201);
+    border-radius: 20px;
 }
+
 #soru{
     width: 300px;
-    padding: 10px;
+    padding: 8px;
     font-size: 20px;
     border: 3px solid rgb(0, 62, 121);
     background-color: rgb(122, 182, 238);
@@ -23,10 +25,15 @@
     margin: 10px 0 10px 10px;
     color: #000000;
     border-radius: 10px;
+    
+}
+.option:hover::before{
+    cursor: pointer;
+    background-color: black;
 }
 .next-btn {
-    border: none;
-    outline: none;
+    outline: none !important;
+	border: none;
     background: rgb(122, 182, 238);
     width: 100px;
     height: 35px;
@@ -35,19 +42,92 @@
     float: right;
     margin: 10px;
 }
-.money{
+  
+.next-btn {
+    border: 1px solid black;
+    border-radius: 3px;
     width: 100px;
-    height: 25px;
-    background-color:rgb(0, 62, 121);;
-    color: white;
-    padding: 5px;
+    height: 30px;
+    display: block;
+  
+    background: linear-gradient(to right, yellow 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
 }
-.sure{
-    width: 50px;
+  
+.next-btn:hover {
+    background-position: left bottom;
+}
+  
+.money{
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    background-color:rgb(0, 62, 121);
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    vertical-align: middle;
+    margin: 2px;    
+    border-radius: 10px;
+}
+#timer{
+    width: 340px;
     height: 25px;
     text-align: center;
     font-size: 24px;
     background-color:rgb(122, 182, 238);
     padding: 10px;
     border: 3px solid rgb(0, 62, 121);
+    border-radius: 10px;
+}
+#timeUpLbl{
+    display: inline-block;
+    width: 170px;
+    height: 70px;
+    background-color:rgb(0, 62, 121);
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    vertical-align: middle; 
+    position: relative;
+    margin: 0 auto;
+    text-align: center; 
+    margin: 0 auto;   
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20%;
+    border: 2px solid white;  
+    font-size: 20px;
+}
+
+#restart{
+    width: 150px;
+    height: 30px;
+    background-color:rgb(0, 62, 121);
+    color: white;
+    border-radius: 10px;
+    
+    
+}
+#gameOverDiv,#winDiv,#restartDiv{
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    background-color:rgb(0, 62, 121);
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    vertical-align: middle; 
+    position: relative;
+    margin: 0 auto;
+    text-align: center; 
+    margin: 0 auto;   
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20%;
+    
+    border: 2px solid white;   
+  
 }
