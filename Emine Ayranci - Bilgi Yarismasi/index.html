@@ -125,7 +125,7 @@
         clearInterval(counterTimer);
         context.innerHTML = "<div id='gameOverDiv'><label id='gameOverLbl'>OYUN BİTTİ</label></div>";
         context.innerHTML += "<div id='restartDiv'><button id='restart' onclick='restart()'>Yeniden Başla</button></div><br>";
-        context.innerHTML += "<div id='winDiv'><label id='win'>" + lbl.innerHTML + " kazandınız </label></div><br>";
+        context.innerHTML += "<div id='winDiv'><label id='win'>" + lbl.context + " kazandınız </label></div><br>";
     }
     function timeUp() {
         context.innerHTML = "<div id='timeUpDiv'><label id='timeUpLbl'>ZAMANINIZ DOLDU KAZANAMADINIZ</label></div><br>";
