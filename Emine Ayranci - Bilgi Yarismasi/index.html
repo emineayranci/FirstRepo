@@ -78,7 +78,7 @@
             if (options[i].checked) {
                 console.log("seçili");
                 if (sorular[counter][5].includes(options[i].value)) {
-                    moneys[counter].style.backgroundColor = "green";
+                    moneys[counter].style.backgroundColor = "red";
                     counter++;
                     count = 30;
                     yazdir(counter);
@@ -94,9 +94,7 @@
             clearInterval(counterTimer);
             timeUp();
             return;
-        } else if (count <= 3) {
-            document.getElementsByClassName("timerClass")[0].style.backgroundColor = "red";
-        }
+        } 
 
         document.getElementById("timer").innerHTML = count + " secs"; // watch for spelling
     }
@@ -137,13 +135,12 @@
         context.innerHTML += "<div id=restartDiv><button id='restart' onclick='restart()'>Yeniden Başla</button></div>";
     }
     function restart() {
-        document.getElementsByClassName("timerClass")[0].style.backgroundColor = "rgb("+ 122 +""+ 182 + "" + 238 +")";
         counter = 0;
         count = 30;
         counterTimer = setInterval(timer, 1000);
         moneys = document.getElementsByClassName("money");
         for (let i = 0; i < moneys.length; i++) {
-            moneys[i].style.backgroundColor = "rgb(" + 0 + " " + 62 + " " + 121 + ")";
+            moneys[i].style.backgroundColor = "rgb("+ 134 +" "+ 10 + " "+ 10 + ")";
         }
         context.innerHTML = "<p id='soru'></p>";
         context.innerHTML += " <label class='option'><input type='radio' name='option' id='op1' value='A' /> <span id='opt1'></span></label > <br>";
