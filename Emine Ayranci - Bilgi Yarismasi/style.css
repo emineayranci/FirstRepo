@@ -1,10 +1,13 @@
+body{
+    width: 600px;
+    height: 800px;
+}
 #context{
     float: left;
     width: 320px;
     height: 450px;
     padding: 20px;
     border: 4px solid rgba(134, 10, 10, 0.918);
-    ;
     background-color:#fcf8f8;
     border-radius: 20px;
 }
