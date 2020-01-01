@@ -26,18 +26,18 @@
             <label class='option'><input type='radio' name='option' id="op4" value='D' /> <span
                     id='opt4'></span></label><br>
         </div> &nbsp;
-        <span class="money" id="oniki">500 TL </span><br> &nbsp;
-        <span class="money" id="onbir">1000 TL</span><br> &nbsp;
-        <span class="money" id="on">2000 TL</span><br> &nbsp;
-        <span class="money" id="dokuz">3000 TL</span><br>&nbsp;
-        <span class="money" id="sekiz">5000 TL</span><br>&nbsp;
-        <span class="money" id="yedi">7500 TL</span><br>&nbsp;
-        <span class="money" id="altı">15000 TL</span><br>&nbsp;
-        <span class="money" id="bes">30000 TL</span><br>&nbsp;
-        <span class="money" id="dort">60000 TL</span><br>&nbsp;
-        <span class="money" id="uc">125000 TL</span><br>&nbsp;
-        <span class="money" id="iki">250000 TL</span><br>&nbsp;
-        <span class="money" id="bir">1000000 TL</span>
+        <span class="money" title="500 TL" id="oniki">500 TL </span><br> &nbsp;
+        <span class="money" title="1000 TL" id="onbir">1000 TL</span><br> &nbsp;
+        <span class="money" title="2000 TL" id="on">2000 TL</span><br> &nbsp;
+        <span class="money" title="3000 TL" id="dokuz">3000 TL</span><br>&nbsp;
+        <span class="money" title="5000 TL" id="sekiz">5000 TL</span><br>&nbsp;
+        <span class="money" title="75000 TL" id="yedi">7500 TL</span><br>&nbsp;
+        <span class="money" title="15000 TL" id="altı">15000 TL</span><br>&nbsp;
+        <span class="money" title="30000 TL" id="bes">30000 TL</span><br>&nbsp;
+        <span class="money" title="60000 TL" id="dort">60000 TL</span><br>&nbsp;
+        <span class="money" title="125000 TL" id="uc">125000 TL</span><br>&nbsp;
+        <span class="money" title="250000 TL" id="iki">250000 TL</span><br>&nbsp;
+        <span class="money" title="1000000 TL" id="bir">1000000 TL</span>
 
 
     </div>
@@ -83,7 +83,7 @@
                     count = 30;
                     yazdir(counter);
                 } else {
-                    gameOver(moneys[counter-1]);
+                    gameOver(moneys[counter - 1]);
                 }
             }
         }
@@ -121,11 +121,17 @@
 
 
     }
-    function gameOver(lbl) {
+    function gameOver(spn) {
         clearInterval(counterTimer);
         context.innerHTML = "<div id='gameOverDiv'><label id='gameOverLbl'>OYUN BİTTİ</label></div>";
         context.innerHTML += "<div id='restartDiv'><button id='restart' onclick='restart()'>Yeniden Başla</button></div><br>";
-        context.innerHTML += "<div id='winDiv'><label id='win'>" + lbl.context + " kazandınız </label></div><br>";
+
+        if (spn==null) {
+            context.innerHTML += "<div id='winDiv'><label id='win'> 0 TL   kazandınız </label></div><br>";
+        } else {
+            context.innerHTML += "<div id='winDiv'><label id='win'>" + spn.title + " kazandınız </label></div><br>";
+
+        }
     }
     function timeUp() {
         context.innerHTML = "<div id='timeUpDiv'><label id='timeUpLbl'>ZAMANINIZ DOLDU KAZANAMADINIZ</label></div><br>";
