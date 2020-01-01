@@ -95,7 +95,6 @@
             timeUp();
             return;
         } else if (count <= 3) {
-
             document.getElementsByClassName("timerClass")[0].style.backgroundColor = "red";
         }
 
@@ -138,6 +137,7 @@
         context.innerHTML += "<div id=restartDiv><button id='restart' onclick='restart()'>Yeniden Başla</button></div>";
     }
     function restart() {
+        document.getElementsByClassName("timerClass")[0].style.backgroundColor = "rgb("+ 122 +""+ 182 + "" + 238 +")";
         counter = 0;
         count = 30;
         counterTimer = setInterval(timer, 1000);
