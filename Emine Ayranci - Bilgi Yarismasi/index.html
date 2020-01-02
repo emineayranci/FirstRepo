@@ -46,6 +46,8 @@
         <a href="https://www.w3schools.com/tags/">Tags</a>
         <br>
         <a href="https://www.sinavevi.net/programlama-temelleri-test-sorulari-2/">Questions</a>
+        <br>
+        <a href="https://maeyler.github.io/JS/">Github</a>
     </div>
 </body>
 
@@ -54,7 +56,7 @@
     var question, a, b, c, d, correctAnswer, options, moneys;
     var counter = 0;
     var sorular = [];
-    var count = 30;
+    var count = 15;
     var counterTimer = setInterval(timer, 1000);
     const url = "https://emineayranci.github.io/FirstRepo/Emine%20Ayranci%20-%20Bilgi%20Yarismasi/sorular.txt";
 
@@ -86,7 +88,7 @@
                 if (sorular[counter][5].includes(options[i].value)) {
                     moneys[counter].style.backgroundColor = "red";
                     counter++;
-                    count = 30;
+                    count = 15;
                     yazdir(counter);
                 } else {
                     gameOver(moneys[counter - 1]);
@@ -142,7 +144,7 @@
     }
     function restart() {
         counter = 0;
-        count = 30;
+        count = 15;
         counterTimer = setInterval(timer, 1000);
         moneys = document.getElementsByClassName("money");
         for (let i = 0; i < moneys.length; i++) {
