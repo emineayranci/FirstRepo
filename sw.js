@@ -1,5 +1,5 @@
-const CACHE ='FirstRepo'
-const FILES = ['/FirstRepo/', '/FirstRepo/Counting.html', '/FirstRepo/CW8/CW8.html', 'FirstRepo/CW5/Courses.html', 'FirstRepo/index.html']
+const CACHE ='JS_AdvProg'
+const FILES = ['/JS_AdvProg/', '/JS_AdvProg/Counting.html', '/JS_AdvProg/CW8/CW8.html', 'JS_AdvProg/CW5/Courses.html', 'JS_AdvProg/index.html']
 
 function installCB(e) {
   e.waitUntil(
