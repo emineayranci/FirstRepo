@@ -1,8 +1,8 @@
 {
     "name": "EMİNE SAMİYENUR AYRANCI",
     "description": "Advanced Programming Classwork",
-    "short_name": "FirstRepo",
-    "start_url": "/FirstRepo/index.html",
+    "short_name": "JS_AdvProg",
+    "start_url": "/JS_AdvProg/index.html",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "#457cdb",
